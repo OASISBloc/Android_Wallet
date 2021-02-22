@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="const_support_help_center_email">support@oasisbloc.io</string>
+
+    <integer name="policy_account_fix_length">12</integer>
+    <string name="policy_account_filter">abcdefghijklmnopqrstuvwxyz12345</string>
+
+    <integer name="policy_private_key_fix_length">51</integer>
+    <string name="policy_private_key_filter">abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789</string>
+
+    <integer name="policy_password_min_length">8</integer>
+    <integer name="policy_password_max_length">15</integer>
+
+
+    <integer name="policy_memo_max_length">256</integer>
+
+</resources>

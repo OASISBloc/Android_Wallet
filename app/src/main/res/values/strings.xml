@@ -1,0 +1,206 @@
+<resources>
+
+    <!-- -->
+    <string name="action_done">Done</string>
+    <string name="action_cancel">Cancel</string>
+    <string name="action_continue">Continue</string>
+    <string name="action_confirm">Confirm</string>
+    <string name="action_ok">OK</string>
+    <string name="action_no">No</string>
+    <string name="action_next">Next</string>
+    <string name="action_send">Send</string>
+    <string name="action_receive">Receive</string>
+    <string name="action_quit">Quit</string>
+
+    <!-- account -->
+    <string name="account_title">Account</string>
+    <string name="account_title_sign_in">Sign in</string>
+    <string name="account_title_import">Import an account</string>
+    <string name="account_title_create">Create an account</string>
+    <string name="account_title_create_cancel">Cancel account creation</string>
+    <string name="account_title_create_copy">Copied to the clipboard</string>
+    <string name="account_title_create_check">Copy keypair</string>
+    <string name="account_title_keypair">Please paste it in a safe place!</string>
+    <string name="account_title_agreement">Send an authentication link &amp; updates to the email address you entered.</string>
+    <string name="account_title_done">Account creation is complete!</string>
+    <string name="account_msg_create_cancel">Are you sure you want to cancel creating wallet account?</string>
+    <string name="account_msg_create_copy">Please keep it in a safe place!</string>
+    <string name="account_msg_create_check">Are you sure you\'ve saved the private key associated with this public key?</string>
+    <string name="account_msg_import">OASISBloc Wallet never collects private keys. Save it to devices only through encryption technology.</string>
+    <string name="account_msg_keypair">Your keypair proves the account ownership. <u>Please paste it in a safe place!</u> OSB Wallet does not store your data. We cannot access accounts, recover keys, reset passwords or reverse transactions. Please be careful about key management.</string>
+    <string name="account_msg_agreement1">I agree to provide my email address to receive updates.</string>
+    <string name="account_msg_agreement2">I agree that the private key management is solely my responsibility.</string>
+    <string name="account_msg_done">The result of the account creation has been sent to the email address you entered.\nPlease check your email for the more information about your account.</string>
+    <string name="account_action_sign_in">Sign in</string>
+    <string name="account_action_import">Import an account</string>
+    <string name="account_action_create"><u>Create an account</u></string>
+    <string name="account_action_create_account">Create account</string>
+    <string name="account_action_forgot_password">Forgot your password?</string>
+    <string name="account_action_generate_key_pair">Generate a key pair</string>
+    <string name="account_action_copy_keypair">Copy keypair</string>
+    <string name="account_action_copy_cancel">I forgot</string>
+    <string name="account_action_copy_done">I copied</string>
+    <string name="account_label_account">Account name</string>
+    <string name="account_label_public_key">Public key</string>
+    <string name="account_label_private_key">Private key</string>
+    <string name="account_label_password">Password</string>
+    <string name="account_label_password_re">Repeat password</string>
+    <string name="account_label_email">Email</string>
+    <string name="account_label_done">Created account:</string>
+    <string name="account_hint_account">12 characters / a–z / 1–5</string>
+    <string name="account_hint_private_key">51 characters / a–z / 0–9</string>
+    <string name="account_hint_password">8–15 characters (letters, numbers)</string>
+    <string name="account_hint_password_re">8–15 characters (letters, numbers)</string>
+    <string name="account_hint_email">Enter your Email address</string>
+    <string name="account_error_account">Must be 12 characters / a–z / 1–5</string>
+    <string name="account_error_private_key">Invalid Private key. Please try again</string>
+    <string name="account_error_password">Password should be between 8~15 characters including letters and numbers.</string>
+    <string name="account_error_password_re">The passwords do not match. Please try again.</string>
+    <string name="account_error_email">Invalid email address. Please try again.</string>
+
+
+    <!-- main -->
+    <string name="main_bottom_tab_wallet">Wallet</string>
+    <string name="main_bottom_tab_transaction">Transactions</string>
+    <string name="main_bottom_tab_data">My Data</string>
+    <string name="main_bottom_tab_marketplace">Marketplace</string>
+    <string name="main_bottom_tab_settings">Setting</string>
+
+
+    <!-- wallet -->
+    <string name="wallet_stake_cpu">CPU</string>
+    <string name="wallet_stake_net">NET</string>
+    <string name="wallet_stake_ram">RAM</string>
+    <string name="wallet_list_header">Tokens</string>
+    <string name="wallet_balance">Balance</string>
+    <string name="wallet_lockup">Lockup</string>
+    <string name="wallet_tab_transactions">Recent Transactions</string>
+    <string name="wallet_tab_lockup">Lockup</string>
+
+    <!-- token send -->
+    <string name="token_send_title">Send</string>
+    <string name="token_send_amount_label">Amount</string>
+    <string name="token_send_amount_hint">Numbers only</string>
+    <string name="token_send_amount_info_s">Balance : %s</string>
+    <string name="token_send_amount_error_under">Must be greater than or equal to 0.001.</string>
+    <string name="token_send_amount_error_over">Over transferable amount.</string>
+    <string name="token_send_account_label">Account name to receive token</string>
+    <string name="token_send_account_hint">Up to 12 digits</string>
+    <string name="token_send_account_error">Invalid account name.</string>
+    <string name="token_send_memo_label">Memo</string>
+    <string name="token_send_memo_hint">Optional</string>
+    <string name="token_send_memo_error">Memo is too long.</string>
+    <string name="token_send_password_label">Password</string>
+    <string name="token_send_password_hint">Enter password</string>
+    <string name="token_send_password_error">Password is incorrect. Please check again.</string>
+    <string name="token_send_private_key_label">Private key</string>
+    <string name="token_send_private_key_hint">51 characters / a–z / 0–9</string>
+    <string name="token_send_private_key_info">OASISBloc Wallet never collects private keys. Save it to devices only through strict encryption technology.</string>
+    <string name="token_send_private_key_error">Private key is incorrect. Please check again.</string>
+    <string name="token_send_check_title">Check transfer request</string>
+    <string name="token_send_successful_title">Successfully transferred</string>
+    <string name="token_send_failure_title">Error occurred</string>
+    <string name="token_send_dialog_from">From</string>
+    <string name="token_send_dialog_to">To</string>
+
+    <!-- resource -->
+    <string name="resource_title">Resources</string>
+    <string name="resource_tab_cpu_net">CPU/NET</string>
+    <string name="resource_tab_ram">RAM</string>
+    <string name="resource_label_balance">Balance</string>
+    <string name="resource_label_stake">Stake</string>
+    <string name="resource_label_allocate">Allocate</string>
+    <string name="resource_label_cpu">CPU</string>
+    <string name="resource_label_net">NET</string>
+    <string name="resource_label_ram">RAM</string>
+    <string name="resource_label_refunding">Refunding</string>
+    <string name="resource_format_info">Available %s / %s</string>
+    <string name="resource_format_refunding_cpu">CPU : %s</string>
+    <string name="resource_format_refunding_net">NET : %s</string>
+
+    <!-- applock -->
+    <string name="applock_title_enter">Enter your lock password</string>
+    <string name="applock_title_check">Check your lock password</string>
+    <string name="applock_title_block">App lock password\nverification failed</string>
+    <string name="applock_msg_not_matched">Password dose not match</string>
+    <string name="applock_msg_activated">App lock is activated</string>
+    <string name="applock_msg_wrong">Wrong password</string>
+    <string name="applock_msg_wrong_format">Wrong password (%d/%d)</string>
+    <string name="applock_msg_continue">Are you sure to stop setting app lock password?</string>
+    <string name="applock_msg_block">Please try later</string>
+    <string name="applock_msg_edit">Use this PIN to open OASISBloc Wallet mobile app</string>
+
+
+    <!-- transactions -->
+    <string name="history_details_title_transaction">Transaction details</string>
+    <string name="history_details_title_lockup">Lockup details</string>
+    <string name="history_details_label_no">No</string>
+    <string name="history_details_label_begin">Begin</string>
+    <string name="history_details_label_end">End</string>
+    <string name="history_details_label_date">Date</string>
+    <string name="history_details_label_from">From</string>
+    <string name="history_details_label_to">To</string>
+    <string name="history_details_label_memo">Memo</string>
+    <string name="history_details_label_name">Name</string>
+    <string name="history_details_label_txid">TXID</string>
+    <string name="history_details_action_claim">Claim</string>
+    <string name="history_details_action_explorer"><u>Go to OSB Explorer</u></string>
+    <string name="history_details_msg_empty_transaction">No transaction here yet</string>
+
+    <!-- settings -->
+    <string name="settings_title">Settings</string>
+    <string name="settings_header_account">Account</string>
+    <string name="settings_header_app">App setting</string>
+    <string name="settings_header_support">Support</string>
+    <string name="settings_header_info">Info</string>
+    <string name="settings_item_account">Name</string>
+    <string name="settings_item_backup">Key backup</string>
+    <string name="settings_item_password">Reset password</string>
+    <string name="settings_item_lock">App lock password</string>
+    <string name="settings_item_help">Help center</string>
+    <string name="settings_item_app_version">App version</string>
+    <string name="settings_item_logout">Logout</string>
+    <string name="settings_logout_action">Logout</string>
+    <string name="settings_logout_alert_title">Are you sure you want to logout?</string>
+    <string name="settings_help_center_msg">Please describe your problem and error messages</string>
+    <string name="settings_key_backup_title">Key backup</string>
+    <string name="settings_key_backup_action">Backup</string>
+    <string name="settings_key_backup_password_error">Password is incorrect. Please check again.</string>
+    <string name="settings_key_backup_alert_title">DO NOT COPY OR SCAN</string>
+    <string name="settings_key_backup_alert_body1">Private key can be at risk if saved on the phone.</string>
+    <string name="settings_key_backup_alert_body2">OASISBloc Wallet is not responsible for the loss of digital assets resulting from the loss, damage or other loss of control over the paper copy of private keys.</string>
+    <string name="settings_key_backup_password_hint">Enter password</string>
+    <string name="settings_key_backup_password_msg">* Please enter your OASISBloc wallet password.</string>
+    <string name="settings_key_backup_key_pair_alert">Your private key will only be displayed if you are logged in via account import or have a transfer history.</string>
+
+    <string name="settings_reset_password_title">Reset password</string>
+    <string name="settings_reset_password_subtitle">Change your password?</string>
+    <string name="settings_reset_password_msg">Please enter your OASISBloc wallet account name and email address to start the password reset process.</string>
+    <string name="settings_reset_password_account_label">OASISBloc wallet account name</string>
+    <string name="settings_reset_password_email_label">Email address</string>
+    <string name="settings_reset_password_done_title">Password reset email has sent</string>
+    <string name="settings_reset_password_done_msg">The email will be valid for only 10 minutes</string>
+
+
+    <!-- msg -->
+    <string name="msg_success">Success</string>
+    <string name="msg_copied">Copied…</string>
+    <string name="msg_failure">Failed…</string>
+    <string name="msg_error_empty">no data…</string>
+    <string name="msg_error_not_implemented">Not Implemented…</string>
+
+
+    <string name="accountid_qrcode">QR Code</string>
+    <string name="select_qrcode">QR Code or Input</string>
+    <string name="select_qrcode_scan">QR Code Scan</string>
+    <string name="select_input_only">Only Input</string>
+    <string name="select_cancel">Cancel</string>
+
+    <string name="add_token_title">Add Token</string>
+    <string name="searchview_search">Search Token</string>
+
+    <!-- China Demo -->
+    <string name="pedometer_title">Pedometer</string>
+
+
+</resources>

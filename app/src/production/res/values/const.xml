@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">OASISBloc</string>
+
+    <string name="const_api_url">https://wallet.oasisbloc.io/</string>
+    <string name="const_block_explorer_transaction_url_s">https://explorer.oasisbloc.io//search?q=%s</string>
+
+</resources>

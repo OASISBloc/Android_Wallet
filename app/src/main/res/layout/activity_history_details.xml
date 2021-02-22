@@ -1,0 +1,291 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".ui.history.HistoryDetailsActivity"
+    tools:ignore="RtlHardcoded">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical">
+
+            <ImageButton
+                android:id="@+id/actionbar_left"
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginBottom="15dp"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/ic_actionbar_back"
+                android:onClick="onClickLeftActionBarBtn"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/actionbar_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginBottom="15dp"
+                android:layout_marginTop="15dp"
+                android:textAlignment="center"
+                android:textColor="#242e42"
+                android:text="@string/history_details_title_transaction"
+                android:textSize="20dp"
+                android:layout_weight="8"/>
+
+            <ImageButton
+                android:id="@+id/actionbar_right"
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginBottom="15dp"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/ic_actionbar_blank"/>
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/history_details_top_bg"
+            android:gravity="center"
+            android:paddingTop="12dp"
+            android:paddingBottom="12dp">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/logo"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                tools:src="@drawable/_temp_obs_ic_1" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/balance"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="12dp"
+                android:textColor="@color/white"
+                android:textSize="22sp"
+                tools:text="123,234.6213 OSB" />
+
+        </LinearLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="#F0F1F2">
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="1000dp"
+                android:orientation="vertical"
+                android:paddingLeft="24dp"
+                android:paddingTop="16dp"
+                android:paddingRight="24dp"
+                android:paddingBottom="16dp"
+                app:divider="@drawable/history_details_recipe_divider"
+                app:showDividers="middle">
+
+                <LinearLayout
+                    android:id="@+id/no_layout"
+                    style="@style/HistoryDetailsInfo_Layout">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        style="@style/HistoryDetailsInfo_Label"
+                        android:text="@string/history_details_label_no" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/no_value"
+                        style="@style/HistoryDetailsInfo_Value"
+                        tools:text="1" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/begin_layout"
+                    style="@style/HistoryDetailsInfo_Layout">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        style="@style/HistoryDetailsInfo_Label"
+                        android:text="@string/history_details_label_begin" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/begin_value"
+                        style="@style/HistoryDetailsInfo_Value"
+                        tools:text="1" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/end_layout"
+                    style="@style/HistoryDetailsInfo_Layout">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        style="@style/HistoryDetailsInfo_Label"
+                        android:text="@string/history_details_label_end" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/end_value"
+                        style="@style/HistoryDetailsInfo_Value"
+                        tools:text="1" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/date_layout"
+                    style="@style/HistoryDetailsInfo_Layout">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        style="@style/HistoryDetailsInfo_Label"
+                        android:text="@string/history_details_label_date" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/date_value"
+                        style="@style/HistoryDetailsInfo_Value"
+                        tools:text="1" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/from_layout"
+                    style="@style/HistoryDetailsInfo_Layout">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        style="@style/HistoryDetailsInfo_Label"
+                        android:text="@string/history_details_label_from" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/from_value"
+                        style="@style/HistoryDetailsInfo_Value"
+                        tools:text="1" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/to_layout"
+                    style="@style/HistoryDetailsInfo_Layout">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        style="@style/HistoryDetailsInfo_Label"
+                        android:text="@string/history_details_label_to" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/to_value"
+                        style="@style/HistoryDetailsInfo_Value"
+                        tools:text="1" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/memo_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="start"
+                    android:orientation="vertical"
+                    android:paddingTop="8dp"
+                    android:paddingBottom="8dp">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        style="@style/HistoryDetailsInfo_Label"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/history_details_label_memo" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/memo_value"
+                        style="@style/HistoryDetailsInfo_Value"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="start"
+                        tools:text="1" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/name_layout"
+                    style="@style/HistoryDetailsInfo_Layout">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        style="@style/HistoryDetailsInfo_Label"
+                        android:text="@string/history_details_label_name" />
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/name_icon"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="12dp"
+                        tools:src="@drawable/ic_transaction_send" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/name_value"
+                        style="@style/HistoryDetailsInfo_Value"
+                        tools:text="1" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/txid_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="start"
+                    android:orientation="vertical"
+                    android:paddingTop="8dp"
+                    android:paddingBottom="8dp">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        style="@style/HistoryDetailsInfo_Label"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/history_details_label_txid" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/txid_value"
+                        style="@style/HistoryDetailsInfo_Value"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="start"
+                        tools:text="12312312312312312312312312312312312312312312312312312312" />
+
+                </LinearLayout>
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+        </ScrollView>
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/divider_transaction_detail_bottom" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/claim"
+            style="@style/Widget.MaterialComponents.Button.UnelevatedButton"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/button_default_height"
+            android:text="@string/history_details_action_claim"
+            android:theme="@style/ThemeOverlay.Accent" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/explorer"
+            style="@style/Widget.MaterialComponents.Button.TextButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="24dp"
+            android:text="@string/history_details_action_explorer"
+            android:theme="@style/ThemeOverlay.Accent"
+            app:icon="@drawable/ic_explorer_next"
+            app:iconGravity="end"
+            app:iconPadding="12dp" />
+
+    </LinearLayout>
+
+</layout>

@@ -1,0 +1,227 @@
+<resources>
+
+    <!-- App Theme -->
+
+    <style name="AppTheme" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <item name="colorPrimary">@color/white</item>
+        <item name="colorPrimaryDark">@color/white</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="materialButtonStyle">@style/Button</item>
+        <item name="android:windowLightStatusBar">true</item>
+        <item name="actionBarStyle">@style/MyActionBarStyle</item>
+        <item name="actionBarTheme">@style/MyActionBarTheme</item>
+    </style>
+
+    <style name="AppTheme.Primary" parent="AppTheme">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimary</item>
+        <item name="android:windowLightStatusBar">false</item>
+    </style>
+
+    <style name="AppTheme.Gray" parent="AppTheme">
+        <item name="colorPrimary">@color/theme_gray</item>
+        <item name="colorPrimaryDark">@color/black</item>
+        <item name="android:windowLightStatusBar">false</item>
+    </style>
+
+    <style name="AppTheme.NoTitle" parent="AppTheme" />
+
+    <style name="AppTheme.TokenDetail" parent="AppTheme">
+        <item name="colorPrimaryDark">@color/colorAccent</item>
+        <item name="android:windowLightStatusBar">false</item>
+    </style>
+
+    <style name="AppTheme.HasTitle" parent="AppTheme">
+        <item name="windowActionBar">true</item>
+        <item name="windowNoTitle">false</item>
+    </style>
+
+    <!-- ActionBar styles -->
+
+
+    <style name="MyActionBarStyle" parent="Widget.MaterialComponents.ActionBar.Primary">
+        <item name="elevation">0dp</item>
+        <item name="background">@drawable/actionbar_background</item>
+        <item name="android:background">@drawable/actionbar_background</item>
+    </style>
+
+    <style name="MyActionBarTheme" parent="Widget.MaterialComponents.ActionBar.Primary">
+        <item name="titleTextStyle">@style/MyTitleTextStyle</item>
+        <item name="fontFamily">sans-serif</item>
+        <item name="android:fontFamily">sans-serif</item>
+        <item name="titleTextColor">#242e42</item>
+        <item name="android:titleTextColor">#242e42</item>
+        <item name="android:textColor">#242e42</item>
+        <item name="android:textColorPrimary">#242e42</item>
+        <item name="android:textStyle">normal</item>
+    </style>
+
+    <style name="MyAppBarTheme">
+        <item name="elevation">0dp</item>
+        <item name="background">@drawable/actionbar_background</item>
+        <item name="android:background">@drawable/actionbar_background</item>
+        <item name="titleTextAppearance">@style/MyTitleTextStyle</item>
+        <item name="fontFamily">sans-serif</item>
+        <item name="android:fontFamily">sans-serif</item>
+        <item name="titleTextColor">#242e42</item>
+        <item name="android:titleTextColor">#242e42</item>
+        <item name="android:textColor">#242e42</item>
+        <item name="android:textColorPrimary">#242e42</item>
+        <item name="android:textStyle">normal</item>
+    </style>
+
+    <style name="MyTitleTextStyle" parent="TextAppearance.MaterialComponents.Headline6">
+        <item name="fontFamily">sans-serif</item>
+        <item name="android:fontFamily">sans-serif</item>
+        <item name="titleTextColor">#242e42</item>
+        <item name="android:titleTextColor">#242e42</item>
+        <item name="android:textColor">#242e42</item>
+        <item name="android:textColorPrimary">#242e42</item>
+        <item name="android:textStyle">normal</item>
+    </style>
+
+    <!-- overlay theme -->
+    <style name="ThemeOverlay.Primary" parent="ThemeOverlay.MaterialComponents.Light">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimary</item>
+        <item name="colorAccent">@color/colorPrimary</item>
+    </style>
+
+    <style name="ThemeOverlay.Secondary" parent="ThemeOverlay.MaterialComponents.Light">
+        <item name="colorPrimary">@color/colorSecondary</item>
+        <item name="colorPrimaryDark">@color/colorSecondary</item>
+        <item name="colorAccent">@color/colorSecondary</item>
+    </style>
+
+    <style name="ThemeOverlay.Accent" parent="ThemeOverlay.MaterialComponents.Light">
+        <item name="colorPrimary">@color/colorAccent</item>
+        <item name="colorPrimaryDark">@color/colorAccent</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="ThemeOverlay.ButtonGray" parent="ThemeOverlay.MaterialComponents.Light">
+        <item name="colorPrimary">@color/button_gray</item>
+        <item name="colorPrimaryDark">@color/button_gray</item>
+        <item name="colorAccent">@color/button_gray</item>
+    </style>
+
+    <style name="ThemeOverlay.White" parent="ThemeOverlay.MaterialComponents.Light">
+        <item name="colorPrimary">@color/white</item>
+        <item name="colorPrimaryDark">@color/white</item>
+        <item name="colorAccent">@color/white</item>
+    </style>
+
+
+    <!-- button -->
+    <style name="Button" parent="Widget.MaterialComponents.Button">
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textStyle">normal</item>
+    </style>
+
+
+    <!-- settings -->
+    <style name="SettingsHeaderText">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">@color/setting_background</item>
+        <item name="android:gravity">bottom</item>
+        <item name="android:textColor">@color/text_light</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:paddingLeft">16dp</item>
+        <item name="android:paddingTop">16dp</item>
+        <item name="android:paddingBottom">8dp</item>
+    </style>
+
+    <style name="SettingsBodyText">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:drawablePadding">8dp</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:textColor">@color/text_dark</item>
+    </style>
+
+    <style name="SettingsBodyTrailing">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/text_default</item>
+    </style>
+
+    <style name="SettingsBodyLayout">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">48dp</item>
+        <item name="android:background">@color/white</item>
+        <item name="android:foreground">?attr/selectableItemBackground</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:orientation">horizontal</item>
+        <item name="android:paddingLeft">16dp</item>
+        <item name="android:paddingRight">16dp</item>
+    </style>
+
+    <!-- history details -->
+    <style name="HistoryDetailsInfo_Layout">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:gravity">center</item>
+        <item name="android:orientation">horizontal</item>
+        <item name="android:paddingTop">8dp</item>
+        <item name="android:paddingBottom">8dp</item>
+    </style>
+
+    <style name="HistoryDetailsInfo_Label">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:textColor">@color/text_dark</item>
+    </style>
+
+    <style name="HistoryDetailsInfo_Value">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:gravity">end</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:textColor">@color/text_default</item>
+    </style>
+
+    <!-- pin -->
+    <style name="Pin_Number">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:background">@drawable/pin_keypad_bg</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">24sp</item>
+        <item name="android:textColor">@color/pin_keypad_text_color</item>
+        <item name="android:scaleType">center</item>
+    </style>
+
+    <!-- text -->
+    <style name="TextThemeLabel">
+        <item name="android:textColor">#242e41</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:fontFamily">sans-serif</item>
+        <item name="fontFamily">sans-serif</item>
+    </style>
+
+    <style name="TextThemeButton">
+        <item name="colorPrimary">#50a1f1</item>
+        <item name="colorPrimaryDark">#50a1f1</item>
+        <item name="colorAccent">#50a1f1</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+        <item name="fontFamily">sans-serif-medium</item>
+    </style>
+
+    <style name="TextThemeBottomButton" parent="Widget.MaterialComponents.Button.UnelevatedButton">
+        <item name="colorPrimary">@color/colorAccent</item>
+        <item name="colorPrimaryDark">@color/colorAccent</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:translationY">@dimen/button_flat_margin</item>
+        <item name="cornerRadius">0dp</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="backgroundTint">@color/button_bottom_background</item>
+        <item name="android:theme">@style/ThemeOverlay.Accent</item>
+    </style>
+
+
+</resources>

@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:ignore="RtlHardcoded,RtlSymmetry">
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:id="@+id/root"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/setting_background">
+
+        <com.google.android.material.appbar.AppBarLayout
+            style="@style/MyAppBarTheme"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <!--
+            <androidx.appcompat.widget.Toolbar
+                style="@style/MyAppBarTheme"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:title="@string/settings_title" />
+                -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:background="@drawable/actionbar_background">
+
+            <ImageButton
+                android:id="@+id/actionbar_left"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_gravity="center_vertical|center_horizontal"
+                android:layout_marginBottom="15dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="5dp"
+                android:layout_weight="1"
+                android:background="@drawable/ic_actionbar_back"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/actionbar_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical|center_horizontal"
+                android:layout_marginBottom="15dp"
+                android:layout_marginTop="5dp"
+                android:textAlignment="center"
+                android:textColor="#242e42"
+                android:text="@string/settings_title"
+                android:textSize="20dp"
+                android:layout_weight="8"/>
+
+            <ImageButton
+                android:id="@+id/actionbar_right"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_gravity="center_vertical|center_horizontal"
+                android:layout_marginBottom="15dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_weight="1"
+                android:background="@drawable/ic_actionbar_blank"/>
+            </LinearLayout>
+
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:divider="@drawable/divider_settings"
+                app:showDividers="middle|end">
+
+                <!-- account -->
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    style="@style/SettingsHeaderText"
+                    android:text="@string/settings_header_account" />
+
+                <LinearLayout style="@style/SettingsBodyLayout">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        style="@style/SettingsBodyText"
+                        android:drawableStart="@drawable/ic_settings_account"
+                        android:text="@string/settings_item_account" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/account_text"
+                        style="@style/SettingsBodyTrailing"
+                        tools:text="TestAccount123" />
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/account_copy"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="8dp"
+                        android:background="?attr/selectableItemBackgroundBorderless"
+                        android:src="@drawable/ic_settings_copy" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/key_backup"
+                    style="@style/SettingsBodyLayout">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        style="@style/SettingsBodyText"
+                        android:drawableStart="@drawable/ic_settings_key_backup"
+                        android:text="@string/settings_item_backup" />
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_arrow_next" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/reset_password"
+                    style="@style/SettingsBodyLayout">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        style="@style/SettingsBodyText"
+                        android:drawableStart="@drawable/ic_settings_reset_password"
+                        android:text="@string/settings_item_password" />
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_arrow_next" />
+
+                </LinearLayout>
+
+
+                <!-- app setting -->
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    style="@style/SettingsHeaderText"
+                    android:text="@string/settings_header_app" />
+
+                <LinearLayout
+                    android:id="@+id/app_lock_password"
+                    style="@style/SettingsBodyLayout">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        style="@style/SettingsBodyText"
+                        android:drawableStart="@drawable/ic_settings_lock"
+                        android:text="@string/settings_item_lock" />
+
+                    <androidx.appcompat.widget.AppCompatCheckBox
+                        android:id="@+id/app_lock_password_switch"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@null"
+                        android:button="@drawable/icon_setting_switch"
+                        android:checked="false"
+                        android:clickable="false"
+                        android:focusable="false"
+                        android:focusableInTouchMode="false" />
+
+                </LinearLayout>
+
+                <!-- support -->
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    style="@style/SettingsHeaderText"
+                    android:text="@string/settings_header_support" />
+
+                <LinearLayout
+                    android:id="@+id/help_center"
+                    style="@style/SettingsBodyLayout">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        style="@style/SettingsBodyText"
+                        android:drawableStart="@drawable/ic_settings_help_center"
+                        android:text="@string/settings_item_help" />
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_arrow_next" />
+
+                </LinearLayout>
+
+
+                <!-- info -->
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    style="@style/SettingsHeaderText"
+                    android:text="@string/settings_header_info" />
+
+                <LinearLayout
+                    android:id="@+id/app_version"
+                    style="@style/SettingsBodyLayout">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        style="@style/SettingsBodyText"
+                        android:drawableStart="@drawable/ic_settings_info"
+                        android:text="@string/settings_item_app_version" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/version_text"
+                        style="@style/SettingsBodyTrailing"
+                        tools:text="0.0.2" />
+
+                </LinearLayout>
+
+
+                <!-- logout -->
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="24dp"
+                    android:background="@color/setting_background" />
+
+                <LinearLayout
+                    android:id="@+id/logout"
+                    style="@style/SettingsBodyLayout">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        style="@style/SettingsBodyText"
+                        android:drawableStart="@drawable/ic_settings_logout"
+                        android:text="@string/settings_item_logout" />
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_arrow_next" />
+
+                </LinearLayout>
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+        </ScrollView>
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+</layout>

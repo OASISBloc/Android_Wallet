@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/wallet"
+        android:icon="@drawable/ic_bottom_wallet"
+        android:title="@string/main_bottom_tab_wallet" />
+
+    <item
+        android:id="@+id/transaction"
+        android:icon="@drawable/ic_bottom_transaction"
+        android:title="@string/main_bottom_tab_transaction" />
+
+    <item
+        android:id="@+id/data"
+        android:icon="@drawable/ic_bottom_data"
+        android:title="@string/main_bottom_tab_data"
+        android:visible="false" />
+
+    <item
+        android:id="@+id/marketplace"
+        android:icon="@drawable/ic_bottom_marketplace"
+        android:title="@string/main_bottom_tab_marketplace"
+        android:visible="false" />
+
+    <item
+        android:id="@+id/settings"
+        android:icon="@drawable/ic_bottom_setting"
+        android:title="@string/main_bottom_tab_settings" />
+
+</menu>

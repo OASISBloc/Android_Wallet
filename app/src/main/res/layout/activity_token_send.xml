@@ -1,0 +1,459 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".ui.wallet.TokenSendActivity"
+    tools:ignore="RtlHardcoded,RtlSymmetry">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical">
+
+            <ImageButton
+                android:id="@+id/actionbar_left"
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginBottom="15dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/ic_actionbar_back"
+                android:onClick="onClickLeftActionBarBtn"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/actionbar_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginBottom="15dp"
+                android:layout_marginTop="15dp"
+                android:textAlignment="center"
+                android:textColor="#242e42"
+                android:text="@string/token_send_title"
+                android:textSize="20dp"
+                android:layout_weight="8"/>
+
+            <ImageButton
+                android:id="@+id/actionbar_right"
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginBottom="15dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginRight="15dp"
+                android:background="@drawable/ic_actionbar_blank"/>
+        </LinearLayout>
+
+
+        <ScrollView
+            android:id="@+id/scroll_view"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:animateLayoutChanges="true"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/alert_background"
+                    android:orientation="horizontal"
+                    android:padding="12dp">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="2dp"
+                        android:layout_marginRight="8dp"
+                        android:src="@drawable/ic_alert_info" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/token_send_private_key_info"
+                        android:textColor="@color/alert_info" />
+
+                </LinearLayout>
+
+                <!-- amount -->
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginRight="16dp"
+                    android:orientation="vertical">
+
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        style="@style/TextThemeLabel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/token_send_amount_label" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp">
+
+                        <androidx.appcompat.widget.AppCompatEditText
+                            android:id="@+id/amount_value"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginBottom="-8dp"
+                            android:layout_weight="1"
+                            android:background="@null"
+                            android:hint="@string/token_send_amount_hint"
+                            android:inputType="numberDecimal"
+                            android:singleLine="true"
+                            android:textColor="@color/gray_dark"
+                            android:textColorHint="@color/gray_light" />
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/amount_clear"
+                            android:layout_width="wrap_content"
+                            android:layout_height="40dp"
+                            android:background="?attr/selectableItemBackgroundBorderless"
+                            android:paddingLeft="8dp"
+                            android:paddingRight="8dp"
+                            android:scaleType="center"
+                            android:src="@drawable/ic_text_clear" />
+
+                    </LinearLayout>
+
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/amount_info"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/colorAccent"
+                        android:textSize="12sp"
+                        tools:text="@string/token_send_amount_info_s" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/amount_error"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/text_error"
+                        android:textSize="12sp"
+                        tools:text="@string/token_send_amount_error_over" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1px"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginBottom="16dp"
+                        android:background="@color/divider" />
+
+                </LinearLayout>
+
+                <!-- account -->
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginRight="16dp"
+                    android:orientation="vertical">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        style="@style/TextThemeLabel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/token_send_account_label" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_marginBottom="-8dp">
+
+                        <androidx.appcompat.widget.AppCompatEditText
+                            android:id="@+id/account_value"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@null"
+                            android:digits="@string/policy_account_filter"
+                            android:hint="@string/token_send_account_hint"
+                            android:inputType="text"
+                            android:maxLength="@integer/policy_account_fix_length"
+                            android:paddingRight="8dp"
+                            android:singleLine="true"
+                            android:textColor="@color/gray_dark"
+                            android:textColorHint="@color/gray_light" />
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/account_clear"
+                            android:layout_width="wrap_content"
+                            android:layout_height="40dp"
+                            android:background="?attr/selectableItemBackgroundBorderless"
+                            android:paddingLeft="8dp"
+                            android:paddingRight="8dp"
+                            android:scaleType="center"
+                            android:src="@drawable/ic_text_clear" />
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="40dp"
+                            android:paddingLeft="8dp"
+                            android:paddingRight="8dp"
+                            android:scaleType="center"
+                            android:src="@drawable/token_send_ic_account" />
+
+                    </LinearLayout>
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/account_error"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/text_error"
+                        android:textSize="12sp"
+                        tools:text="@string/token_send_account_error" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1px"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginBottom="16dp"
+                        android:background="@color/divider" />
+
+                </LinearLayout>
+
+
+                <!-- memo -->
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginRight="16dp"
+                    android:orientation="vertical">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        style="@style/TextThemeLabel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/token_send_memo_label" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp">
+
+                        <androidx.appcompat.widget.AppCompatEditText
+                            android:id="@+id/memo_value"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginBottom="-8dp"
+                            android:layout_weight="1"
+                            android:background="@null"
+                            android:hint="@string/token_send_memo_hint"
+                            android:inputType="text"
+                            android:paddingRight="8dp"
+                            android:singleLine="true"
+                            android:textColor="@color/gray_dark"
+                            android:textColorHint="@color/gray_light" />
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/memo_clear"
+                            android:layout_width="wrap_content"
+                            android:layout_height="40dp"
+                            android:background="?attr/selectableItemBackgroundBorderless"
+                            android:paddingLeft="8dp"
+                            android:paddingRight="8dp"
+                            android:scaleType="center"
+                            android:src="@drawable/ic_text_clear" />
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="40dp"
+                            android:paddingLeft="8dp"
+                            android:paddingRight="8dp"
+                            android:scaleType="center"
+                            android:src="@drawable/token_send_ic_memo" />
+
+                    </LinearLayout>
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/memo_error"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/text_error"
+                        android:textSize="12sp"
+                        tools:text="@string/token_send_memo_error" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1px"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginBottom="16dp"
+                        android:background="@color/divider" />
+
+                </LinearLayout>
+
+                <!-- password -->
+
+                <LinearLayout
+                    android:id="@+id/password_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginRight="16dp"
+                    android:animateLayoutChanges="true"
+                    android:orientation="vertical">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        style="@style/TextThemeLabel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/token_send_password_label" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <androidx.appcompat.widget.AppCompatEditText
+                            android:id="@+id/password_value"
+                            android:layout_width="0dp"
+                            android:layout_height="40dp"
+                            android:layout_marginBottom="-8dp"
+                            android:layout_weight="1"
+                            android:background="@null"
+                            android:hint="@string/token_send_password_hint"
+                            android:inputType="textPassword"
+                            android:maxLength="@integer/policy_password_max_length"
+                            android:singleLine="true"
+                            android:textColor="@color/gray_dark"
+                            android:textColorHint="@color/gray_light" />
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/password_clear"
+                            android:layout_width="wrap_content"
+                            android:layout_height="40dp"
+                            android:background="?attr/selectableItemBackgroundBorderless"
+                            android:paddingLeft="8dp"
+                            android:paddingRight="8dp"
+                            android:scaleType="center"
+                            android:src="@drawable/ic_text_clear" />
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/password_hide"
+                            android:layout_width="wrap_content"
+                            android:layout_height="40dp"
+                            android:background="?attr/selectableItemBackgroundBorderless"
+                            android:paddingLeft="8dp"
+                            android:paddingRight="8dp"
+                            android:scaleType="center"
+                            android:src="@drawable/ic_text_visibility" />
+
+                    </LinearLayout>
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/password_error"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/text_error"
+                        android:textSize="12sp"
+                        tools:text="@string/token_send_password_error" />
+
+                </LinearLayout>
+
+                <!-- private key -->
+
+                <LinearLayout
+                    android:id="@+id/private_key_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginRight="16dp"
+                    android:animateLayoutChanges="true"
+                    android:orientation="vertical">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        style="@style/TextThemeLabel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/token_send_private_key_label" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <androidx.appcompat.widget.AppCompatEditText
+                            android:id="@+id/private_key_value"
+                            android:layout_width="0dp"
+                            android:layout_height="40dp"
+                            android:layout_marginBottom="-8dp"
+                            android:layout_weight="1"
+                            android:background="@null"
+                            android:digits="@string/policy_private_key_filter"
+                            android:hint="@string/token_send_private_key_hint"
+                            android:inputType="text"
+                            android:maxLength="@integer/policy_private_key_fix_length"
+                            android:singleLine="true"
+                            android:textColor="@color/gray_dark"
+                            android:textColorHint="@color/gray_light" />
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/private_key_clear"
+                            android:layout_width="wrap_content"
+                            android:layout_height="40dp"
+                            android:background="?attr/selectableItemBackgroundBorderless"
+                            android:paddingLeft="8dp"
+                            android:paddingRight="8dp"
+                            android:scaleType="center"
+                            android:src="@drawable/ic_text_clear" />
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/private_key_hide"
+                            android:layout_width="wrap_content"
+                            android:layout_height="40dp"
+                            android:background="?attr/selectableItemBackgroundBorderless"
+                            android:paddingLeft="8dp"
+                            android:paddingRight="8dp"
+                            android:scaleType="center"
+                            android:src="@drawable/ic_text_visibility" />
+
+                    </LinearLayout>
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/private_key_error"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/text_error"
+                        android:textSize="12sp"
+                        tools:text="@string/token_send_private_key_error" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </ScrollView>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/action"
+            style="@style/TextThemeBottomButton"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/button_flat_height"
+            tools:text="@string/action_next" />
+
+    </LinearLayout>
+
+</layout>
